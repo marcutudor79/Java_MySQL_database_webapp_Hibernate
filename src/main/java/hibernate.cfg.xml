@@ -8,8 +8,8 @@
     <property name="hibernate.query.factory_class">org.hibernate.hql.internal.classic.ClassicQueryTranslatorFactory</property>
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/database_pibd</property>
     <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-    <property name="hibernate.connection.username">root</property>
-    <property name="hibernate.connection.password">AnBuhY8F@a^U3e4</property>
+    <property name="hibernate.connection.username">notroot</property>
+    <property name="hibernate.connection.password">pass123</property>
     <mapping resource="pojo/Junction.hbm.xml"/>
     <mapping resource="pojo/Animals.hbm.xml"/>
     <mapping resource="pojo/Characteristics.hbm.xml"/>
