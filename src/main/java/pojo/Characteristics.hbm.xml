@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="pojo.Characteristics" table="characteristics" catalog="database_pibd"
+		optimistic-lock="version">
+		<id name="idcharacteristics" type="java.lang.Integer">
+			<column name="idcharacteristics" />
+			<generator class="identity" />
+		</id>
+		<property name="clas" type="string">
+			<column name="class" length="45" />
+		</property>
+		<property name="orders" type="string">
+			<column name="orders" length="45" />
+		</property>
+		<property name="species" type="string">
+			<column name="species" length="45" />
+		</property>
+		<property name="kingdom" type="string">
+			<column name="kingdom" length="45" />
+		</property>
+		<set name="junctions" table="junction" inverse="true"
+			lazy="true" fetch="select">
+			<key>
+				<column name="idcharacteristics" />
+			</key>
+			<one-to-many class="pojo.Junction" />
+		</set>
+	</class>
+</hibernate-mapping>

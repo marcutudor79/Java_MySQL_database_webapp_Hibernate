@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>AnimalsController</servlet-name>
+        <servlet-class>Controller.AnimalsController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CharacteristicsController</servlet-name>
+        <servlet-class>Controller.CharacteristicsController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>JunctionController</servlet-name>
+        <servlet-class>Controller.JunctionController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AnimalsController</servlet-name>
+        <url-pattern>/AnimalsController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CharacteristicsController</servlet-name>
+        <url-pattern>/CharacteristicsController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>JunctionController</servlet-name>
+        <url-pattern>/JunctionController</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>add_Animals.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
